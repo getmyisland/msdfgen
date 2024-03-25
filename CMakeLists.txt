@@ -102,9 +102,6 @@ target_compile_definitions(msdfgen PRIVATE MSDFGEN_USE_CPP11)
 
 target_link_libraries(msdfgen PUBLIC freetype)
 
-# Surpress all warnings for freetype (Visual Studio)
-target_compile_options(freetype PUBLIC /w)
-
 if(WIN32)
     target_compile_definitions(msdfgen PRIVATE _CRT_SECURE_NO_WARNINGS)
     target_compile_options(msdfgen PRIVATE /W4)
